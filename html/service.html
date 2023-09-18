@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelmania - Service</title>
+    <link rel="stylesheet" type="text/css" href="../css/service.css">
+    <link rel="icon" type="image/x-icon" href="../images/home/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+        html { 
+            overflow-y: scroll; 
+            overflow-x:hidden; 
+        }
+        body { 
+            background-color: #eeeeee;
+        }
+        .navilist, .navbar {
+            position: inherit;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            transition: 0.3s ease;
+            z-index: 999;
+            background-color:#0e1d2bbd ;
+            border-radius: 0;
+        }
+        .logo {
+            color:white;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 2.2em;
+        }
+        .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        .navbar-nav a {
+            color: white;
+            font-weight: 500;
+        }
+        .navbar-nav li:hover {
+            background-color: #29d9d5;
+        }
+        .navbar-nav a::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #29d9d5;
+            transition: 0.3s ease;
+        }
+        .navbar-nav a:hover::before {
+            width: 100%;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        footer {
+            position: relative;
+            bottom: 0;
+            background: linear-gradient(to right, #03040e, #0f0602);
+            width: 100%;
+            color: #fff;
+            padding: 100px 0 30px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .boxcontainer {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .box {
+            flex-basis: 25%;
+            padding: 10px;
+        }
+        .box:nth-child(2) {
+            flex-basis: 15%;
+        }
+        footer .logo {
+            color:white;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2em;
+        }
+        footer .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        footer p {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        footer h3 {
+            width: fit-content;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        .email {
+            width: fit-content;
+            border-bottom: 1px solid #ccc;
+        }
+        .box a {
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: white;
+        }
+        .quick .links {
+            display: block;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+        .quick .links:hover {
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        .quick i,.contact i {
+            padding-right: 0.5rem;
+        }
+        .social {
+            display: inline;
+        }
+        .social .fab {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .social .fab:hover {
+            background: #fff;
+        }
+        .social .fa-facebook-f:hover {
+            color: 	#4267B2;
+        }
+        .social .fa-youtube:hover {
+            color: #FF0000;
+        }
+        .social .fa-twitter:hover {
+            color: #00acee;
+        }
+        .social .fa-instagram:hover {
+            color: #8a3ab9;
+        }
+        .social .fa-linkedin:hover {
+            color: #0072b1;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        hr {
+            width: 90%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        .created {
+            text-align: center;
+        }
+        .created span {
+            color: #29d9d5;
+        }
+        .underline {
+            width: 100%;
+            height: 5px;
+            background: #767676;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            overflow: hidden;
+        }
+        @media screen and (max-width: 768px) {
+        .navbar {
+            position: inherit;
+            background-color:#0e1d2bee ;
+        }
+        .boxcontainer {
+            display: block;
+        }
+        .box {
+            align-items: center;
+        }
+        }
+        @media screen and (max-width: 854px) {
+            .boxcontainer {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 993px){
+        .about {
+            display: block;
+        }
+        }
+        @media screen and (max-width: 1135px) and (min-width: 768px) {
+        .box {
+            flex-basis:auto;
+        }
+        .underline {
+            position: relative;
+            top: 5px;
+        }
+        }
+        @media only screen and (max-width: 760px)  {
+        table {
+	        display:none;
+        }
+        }
+    </style>
+</head>
+<body id="body">
+    <nav class="navilist navbar navbar-inverse" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand logo"><i class="fas fa-umbrella-beach"></i>Travelmania</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="destination.html">destination</a></li>
+                    <li class="active" style="background-color:#29d9d5;"><a href="#">service</a></li>
+                    <li><a href="news.html">news</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <p class="p1">The government initiatives in development of tourism date back to 1937 when the Ceylon Tourist Bureau was established. However, it was closed down in September 1939 due to World War II. After Sri Lanka's independence the promotion of tourism was again considered by re-establishing the Ceylon Tourist Board which took over the function of the Tourist Bureau.In 1965, J. R. Jayewardene as Minister of State initiated the first major development of the tourism industry with the Ceylon Tourist Board Act No 10 of 1966 and the Ceylon Hotels Corporation Act No 14 of 1966, which formed the Ceylon Tourist Board and the Ceylon Hotels Corporation. Since then the Ceylon Tourist Board has functioned as the state agency, responsible for development and promotion of the tourism sector in Sri Lanka.</p>
+        <h1 class="hd">Get ready to travel and discover Sri Lanka</h1>
+        <div class="container">
+            <p id="demo">All of you are fortunate to see this magnificent island.There are a lot of marvellous places and experiences for you all to feel.Grab your chances before long!</p>
+            <img id="img" src="../images/serviceimages/road-trip-with-raj-0uI8LANIe0A-unsplash.jpg" alt="beauty of srilanka">
+            <h3 class="h3d">Sri Lankan Heritage</h3>
+            <p id="p2">The heriteges of a country represents the ancient socitey,people and their behaviours.Most of the people in the world are willing to explore these heritages of the countries.They explore them as a hobby.Some of them do it for their educational purposes.Some are exploring heriteges of a country just for fun.Any way if you are planning to travel in Sri Lanka,make sure to visit Sri Lankan historical places.That will make you fantastic,marvellous,surprised.So you would be able to get to know how Srilnakans observes their religions,how they devoloped ancient technologies and etc. </p>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Sigiriya"><img class="sigiriya imb" src="../images/serviceimages/1598868982_1746364_sunfm_Sigiriya-Fortress-Sri-Lanka.jpg" alt="Sigiriya"></a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Nallur,_Jaffna"><img class="nallur imb" src="../images/serviceimages/z_p06-Nallur-01.jpg" alt="Nallur"></a></td>
+                <td><a href="https://whc.unesco.org/en/list/561/"><img class="imb" src="../images/serviceimages/Dambulla-Cave-Temple.jpg" alt="Dambulla cave temple"></a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Jetavanaramaya"><img class="imb" src="../images/serviceimages/Fascinating-large-brownish-stupa-of-Jethawanaramaya-Monastery-Complex-Sri-Lanka.jpg" alt="Dambulla cave temple"></a></td>
+            </tr>
+            <tr>
+                <td style="color:#2aa4c4;font-size:22px;">Sigiriya</td>
+                <td style="color:#2aa4c4;font-size:22px;">Nallur</td>
+                <td style="color:#2aa4c4;font-size:22px;">Dambulla cave temple</td>
+                <td style="color:#2aa4c4;font-size:22px;">Jethavanaramaya</td>
+            </tr>
+            <tr>
+                <td>The Sinhalese king Kashyapa I (reigned 477–495) built a palace in the shape of a monumental lion on the several acres of ground at the summit, intending it to be a safeguard against his enemies. However, the king was defeated in 495, and the palace fell into ruin.</td>
+                <td>The name Nall-ur was colloquially used by natives in Jaffna to refer to the town as the 'place of high castes'. The first part of the word Nallur ( Nall ) derives from the Tamil word ‘Nalla’ which means 'good'.</td>
+                <td>Dambulla cave temple also known as theGolden Temple of Dambulla is a World Heritage Site (1991) in Sri Lanka, situated in the central part of the country. This site is situated 148 km east of Colombo and 72 km north of Kandy.</td>
+                <td>The Jetavanaramaya is a stupa located in the ruins of Jetavana in the sacred world heritage city of Anuradhapura, Sri Lanka. Mahasena of Anuradhapura (273–301) initiated the construction of the stupa following the destruction of the mahavihara.</td>    
+            </tr>
+        </table>  
+    </div>
+    <div class="container">
+        <h3 class="h3d">Outdoor Adventures</h3>
+        <p id="p2">The world has been created from adventures.All of us love to do various adventures.Withot adventures the human beings would not survive.So most of us are doing outdoor adventures to get relaxed and to get fun.But if you are visiting Sri Lanka you would be able to get memorable outdoor adventures and sports.I assure ,such activities you have never done in your life time.Get ready to feel the experieces.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/deepseafishing.jpg" alt="deep sea fishing">
+            <p class="coll1">Deep sea fishing</p>
+            <P class="colp">Surrounded from all sides by the Indian Ocean, Sri Lanka's seas are rich in marine life and exotic sea creatures. Deep sea fishing is one of the most popular leisure activities taken up by visitors and locals as well. This beautiful island is one of the best spots for game fishing in Asia. <a href="https://www.myflightzone.com.au/destinations/sri-lanka/fishing-srilanka">Click here</a> for more information.</P>
+        </div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/-131626821615_59576319291_1533786335_n.jpg" alt="rock climbing">
+            <p class="coll1">Rock climbing</p>
+            <P class="colp">Sri Lanka’s impressive mountains, amazing rocks and stunning views make the country a true paradise for climbers. Rock climbing is an exhilarating, yet extreme sport that tests the climber's physical and mental strength, endurance, agility and balance.</P>
+        </div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/y495_20130615154506.jpg" alt="Lahugala National parl">
+            <p class="coll1">Visiting Lahugala National Park</p>
+            <P class="colp">This national park is used by elephants traditionally as a feeding ground. A herd of 150 is attracted by Sacciolepis interrupta grass which is common around the Lahugala tank. Endemic Toque Macaque, Tufted Gray Languor, Sloth Bear, Golden Jackal, Rusty-spotted Cat, Fishing Cat and etc.<a href="https://en.wikipedia.org/wiki/Lahugala_Kitulana_National_Park">Click here</a> for more info.</P>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/Main-Featured-Image-5.jpg" alt="divinng">
+            <p class="coll1">Scuba diving</p>
+            <P class="colp">Going underwater in a scuba suit is only worth it if you find a variety of corals, fishes, and caves. Scuba Diving in Sri Lanka provides just the same and much more. Much famed for its tea, spices, handicrafts, and blue sapphires, Sri Lanka has some of the best water sports in all of Asia.<a href="https://traveltriangle.com/blog/scuba-diving-in-sri-lanka/">Click here</a> for more info.</P>
+        </div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/Adventure-water-sport.jpg" alt="water sports">
+            <p class="coll1">Water sports</p>
+            <P class="colp">Sri Lanka will captivate you with its scenic views, ancient ruins & pristine beaches, and leave you awestruck, for sure. But, if you are a person who is done exploring the lands and wishes to hit the waters, then, the country has something exquisite for you in its store.<a href="https://www.bestoflanka.com/adventure-water-sports-in-sri-lanka.php?lId=01">Click here</a> for more info.</P>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/tips-on-budget-Train-travel-in-Sri-Lanka.jpg" alt="train">
+            <p class="coll1">Train through the hill country</p>
+            <P class="colp">One of the world’s most beautiful train trips, the seven hour-journey passes through tea estates dotted with workers in brightly colored saris, pine forests, waterfalls, mountains, and gorges <a href="https://awaywiththesteiners.com/trains-in-sri-lanka/">Click here</a> for more info.</P>
+        </div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/daa680d84657588675f950e2204260c6.jpg" alt="sea kayaking">
+            <p class="coll1">Sea Kayaking</p>
+            <P class="colp">The beautiful island is not blessed with large bodies of water such as lakes, however the country if dotted with man-made reservoirs and vast network of river systems.<a href="https://www.ecoteam.lk/experiences/water-based-activities-sri-lanka/canoeing-tours-kayaking-sri-lanka.html">Click here</a> for more info.</P>
+        </div>
+        <div class="col-md-4">
+            <img class="imb" src="../images/serviceimages/little-adams-peak-ella-1024x683.jpg" alt="walking">
+            <p class="coll1">Walking the hills</p>
+            <P class="colp">Adams Peak is one of the highlights of Sri Lanka and a must for most backpackers coming to Sri Lanka. The climb to the summit is about 5.500 steps and is usually done by night to enjoy the sunrise.<a href="https://bikudotravel.com/inspiration/climbing-adam-s-peak-in-sri-lanka/#:~:text=Adams%20Peak%20is%20one%20of,beautiful%202243%20meter%20high%20mountain.">Click here</a>for more info.</P>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="h3d">Special Chances</h3>
+        <p id="p2">Sri Lanka has a reputationfor hospitality.Because our social orientation hings on a tradition of care and empathy.Often Sri Lankans are credited for their warmth and friendly nature,and inevitably this has had a positive association on the nation's hospitality industry.</p>
+    </div>
+        <div class="row rownew">
+            <div class="col-md-6">
+                <img class="imb" src="../images/serviceimages/used-IG-PN-FB-@makethislastforever_Isabeau-Scheire-DSC00371-1024x683.jpg" alt="tuk tuk riding">
+            </div>
+            <div class="col-md-6 des">
+                <P class="coll1">Ride in tuk tuk</P>
+                <p class="colp">Ride on a three wheeler with one's pal is an ideal fascinating travel activity that one should not miss when they holiday in Sri Lanka.</p>
+            </div>
+        </div><hr>
+        <div class="row rownew">
+            <div class="col-md-6 des">
+                <P class="coll1">Vedda village tour</P>
+                <p class="colp">It’s all about spending some quality time in the backwoods of Sri Lanka with the Vedda People, the indigenous people of Sri Lanka. The Veddas are a native community believed to be decedents of Prince Vijaya (5th – 6th century BCE), the first recorded King of Sri Lanka.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="imb" src="../images/serviceimages/hq720.jpg" alt="vedda village" >
+            </div>
+        </div><hr>
+        <div class="row rownew">
+            <div class="col-md-6">
+                <img class="imb" src="../images/serviceimages/Traditional-Ayurveda-treatment.jpg" alt="ayurveda treatment">
+            </div>
+            <div class="col-md-6 des">
+                <P class="coll1">Traditiona Ayurveda treatment</P>
+                <p class="colp">Ayurvedic medical system has a long history and the school of surgery is qualified with a vast array of methods for fracture treatment. From the past, it has been overlapped with native orthopedic methods which are practiced in Sri Lanka.</p>
+            </div>
+        </div>
+    <div class="container-fluid">
+        <P id="last">A land of myth, legend, history and one of the richest cultures, Sri Lanka is one of the hottest travel destinations and lures adventurers of all kinds. Perhaps you’re someone who loves the solitude of nature and steady walks through trails. Maybe you love relaxing by the sea with the sun warming your face and a cool breeze caressing your skin.</P>
+    </div>
+    <footer>
+        <div class="boxcontainer">
+            <div class="box">
+                <a href="#" class="logo"><i class='fas fa-umbrella-beach'></i>Travelmania</a>
+                <p>Travelmania is a place where you can find all info that you need to know before exploring Sri Lanka.</p>
+                <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box quick">
+                <h3>quick access<div class="underline"></div></h3>
+                <a href="../index.html" class="links"><i class="fas fa-caret-right"></i>home</a>
+                <a href="about.html" class="links"><i class="fas fa-caret-right"></i>about</a>
+                <a href="destination.html" class="links"><i class="fas fa-caret-right"></i>Destination</a>
+                <a href="#body" class="links"><i class="fas fa-caret-right"></i>service</a>
+                <a href="news.html" class="links"><i class="fas fa-caret-right"></i>news</a>
+            </div>
+            <div class="box contact">
+                <h3>contact us<div class="underline"></div></h3>
+                <p><i class="fas fa-phone"></i>+94-772561395</p>
+                <p class="email"><i class="fas fa-envelope"></i><a href="mailto:info@travelmania.com">info@travelmania.com</a></p>
+                <p><i class="fas fa-map-marker"></i>Colombo,Sri Lanka</p>
+            </div>
+        </div>
+        <hr>
+        <div class="created"><span>Group37</span> web project &copy; 2022 - All right reserved</div>
+    </footer>
+</body>
+</html>

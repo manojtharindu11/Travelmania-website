@@ -1,0 +1,45 @@
+.container2{
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;  
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.card{
+    flex: 0 270px;
+    background: rgb(243, 243, 243);
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    align-self: normal;
+    margin-top: 110px;
+}
+.card .img{
+    width: 100%;
+    height: 220px;  
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .txt{
+    padding: 10px;
+    text-align: center;
+}
+.text h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color:#29d9d5;
+}
+.text p {
+    text-transform: none;
+}

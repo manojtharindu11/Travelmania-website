@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelmania - News</title>
+    <link rel="stylesheet" type="text/css" href="../css/news.css">
+    <link rel="icon" type="image/x-icon" href="../images/home/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+        html { 
+            overflow-y: scroll; 
+            overflow-x:hidden; 
+        }
+        body { 
+            background-color: #eeeeee;
+        }
+        .navilist, .navbar {
+            position: inherit;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            transition: 0.3s ease;
+            z-index: 999;
+            background-color:#0e1d2bbd ;
+            border-radius: 0;
+        }
+        .logo {
+            color:white;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 2.2em;
+        }
+        .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        .navbar-nav a {
+            color: white;
+            font-weight: 500;
+        }
+        .navbar-nav li:hover {
+            background-color: #29d9d5;
+        }
+        .navbar-nav a::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #29d9d5;
+            transition: 0.3s ease;
+        }
+        .navbar-nav a:hover::before {
+            width: 100%;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        footer {
+            position: relative;
+            bottom: 0;
+            background: linear-gradient(to right, #03040e, #0f0602);
+            width: 100%;
+            color: #fff;
+            padding: 100px 0 30px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .boxcontainer {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .box {
+            flex-basis: 25%;
+            padding: 10px;
+        }
+        .box:nth-child(2) {
+            flex-basis: 15%;
+        }
+        footer .logo {
+            color:white;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2em;
+        }
+        footer .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        footer p {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        footer h3 {
+            width: fit-content;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        .email {
+            width: fit-content;
+            border-bottom: 1px solid #ccc;
+        }
+        .box a {
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: white;
+        }
+        .quick .links {
+            display: block;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+        .quick .links:hover {
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        .quick i,.contact i {
+            padding-right: 0.5rem;
+        }
+        .social {
+            display: inline;
+        }
+        .social .fab {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .social .fab:hover {
+            background: #fff;
+        }
+        .social .fa-facebook-f:hover {
+            color: 	#4267B2;
+        }
+        .social .fa-youtube:hover {
+            color: #FF0000;
+        }
+        .social .fa-twitter:hover {
+            color: #00acee;
+        }
+        .social .fa-instagram:hover {
+            color: #8a3ab9;
+        }
+        .social .fa-linkedin:hover {
+            color: #0072b1;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        hr {
+            width: 90%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        .created {
+            text-align: center;
+        }
+        .created span {
+            color: #29d9d5;
+        }
+        .underline {
+            width: 100%;
+            height: 5px;
+            background: #767676;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            overflow: hidden;
+        }
+        @media screen and (max-width: 768px) {
+        .navbar {
+            position: inherit;
+            background-color:#0e1d2bee ;
+        }
+        .boxcontainer {
+            display: block;
+        }
+        .box {
+            align-items: center;
+        }
+        }
+        @media screen and (max-width: 854px) {
+            .boxcontainer {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 993px){
+        .about {
+            display: block;
+        }
+        }
+        @media screen and (max-width: 1135px) and (min-width: 768px) {
+        .box {
+            flex-basis:auto;
+        }
+        .underline {
+            position: relative;
+            top: 5px;
+        }
+        }
+    </style>
+</head>
+<body id="body">
+    <nav class="navilist navbar navbar-inverse" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand logo"><i class="fas fa-umbrella-beach"></i>Travelmania</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="destination.html">destination</a></li>
+                    <li><a href="service.html">service</a></li>
+                    <li class="active" style="background-color:#29d9d5;"><a href="#">news</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <table class="table table1" id="table1">
+        <tr>
+            <td colspan="3" class="td1"><h1 class="h1head">Upcoming Festivals</h1></td>
+        </tr>
+        <tr>
+          <td class="td1">
+            <img class="main" src="../images/newsimages/katharagama.PNG">
+            <a  href="../html/newshtml/Kataragama Esala Festival.html">
+            <h3 class="h3head">Kataragama Esala Festival: 21 Jul, 2022</h3>
+           </a></td>
+          <td class="td1"> 
+            <img  class="main" src="../images/newsimages/vel.PNG"> 
+            <a  href="../html/newshtml/vel festival.html">
+            <h3 class="h3head">Vel Festival: July | August</h3>
+            </a></td>
+         <td class="td1">
+           <img  class="main" src="../images/newsimages/esela perahera.PNG">
+           <a href="../html/newshtml/esela perahera.html">
+           <h3 class="h3head">Kandy Esela Perahera: 02 Aug – 12 Aug, 2022</h3>
+           </a></td>
+        </tr>
+        <tr>
+          <td class="td1">
+            <img class="main" src="../images/newsimages/nallur .PNG">
+            <a  href="../html/newshtml/Nallur Festival.html">
+            <h3 class="h3head">Nallur Festival: August-September</h3></a></td>
+          <td class="td1">
+            <img class="main"  src="../images/newsimages/dilwali.PNG">
+            <a  href="../html/newshtml/dilwali.html">
+            <h3 class="h3head">Diwali: 24 Oct, 2022</h3>
+            </a></td>
+          <td class="td1">
+            <img  class="main" src="../images/newsimages/Christmas.PNG">
+            <a  href="../html/newshtml/Christmas.html">
+            <h3 class="h3head">Christmas: 25 December, 2022</h3>
+          </a></td>
+        </tr>
+    </table>
+    <br>
+    <h1 class="h1head" style="font-weight: bolder;">Latest Travel & Tourism News</h1>   
+    <table class="table2" id="table2">
+    <tr class="tr2">
+        <td class="td2">
+        <a href="../html/newshtmal/news1.html">
+            <h4 class="newstopic">Promotion of Sri Lanka tourism in Indonesia</h4> </a>
+        <h4>The Embassy of Sri Lanka in Indonesia in collaboration with the Sri Lanka Tourism Promotion Bureau organized a Sri Lanka ...</h4>
+        </td>
+        <td class="tdimg"><img class="image" src="../images/newsimages/news1.PNG"></td>
+    </tr>
+    <tr class="tr2" >
+    <td class="td2">
+        <a href="../html/newshtmal/news2.html">
+        <h4 class="newstopic">Sri Lanka To Organise Road Shows In Five Indian Cities To Attract Tourists</h4> </a>
+        <h4> As per reports, even when the country was in crisis, it saw a footfall of 61,951
+        tourists only from India in the first five...</h4>
+    </td>
+    <td  class="tdimg"><img class="image" src="../images/newsimages/news2.png"></td>
+    </tr>
+    <tr class="tr2">
+    <td class="td2">
+        <a href="../html/newshtmal/news3.html">
+        <h4 class="newstopic">Sri Lanka participates at South Asia’s Travel and Tourism Exchange (SATTE) 2022 at India Expo Mart,
+            Greater Noida, Delhi-NCR, India</h4> </a>
+        <h4>As another result of its continuous effort of promoting Sri Lanka as a potential Tourism destination,
+        Sri Lanka Tourism participated at SATTE ...</h4>
+    </td>
+    <td class="tdimg" ><img class="image" src="../images/newsimages/news3.png"></td>
+    </tr>
+    <tr class="tr2">
+    <td class="td2">
+        <a href="../html/newshtmal/news4.html">
+        <h4 class="newstopic">Sri Lanka Tourism Promotion Bureau welcomes Israeli Film Crew </h4></a>
+        <h4>The main filming will be taking place in Arugam Bay, Colombo, as well as in Tel Aviv- Israel. 
+        This film is ...
+        </h4>
+    </td>
+    <td  class="tdimg"><img class="image" src="../images/newsimages/news4.png"></td>
+    </tr>
+    <tr class="tr2">
+    <td class="td2">
+        <a href="../html/newshtmal/news5.html">
+        <h4  class="newstopic">Promotion of Sri Lanka Tourism in France</h4> </a>
+        <h4>A meeting between Minister of Tourism and Lands of Sri Lanka, ...
+        </h4>
+    </td>
+    <td  class="tdimg"><img class="image" src="../images/newsimages/news5.png"></td>
+    </tr>
+    </table>
+    <footer>
+        <div class="boxcontainer">
+            <div class="box">
+                <a href="#" class="logo"><i class='fas fa-umbrella-beach'></i>Travelmania</a>
+                <p>Travelmania is a place where you can find all info that you need to know before exploring Sri Lanka.</p>
+                <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box quick">
+                <h3>quick access<div class="underline"></div></h3>
+                <a href="../index.html" class="links"><i class="fas fa-caret-right"></i>home</a>
+                <a href="about.html" class="links"><i class="fas fa-caret-right"></i>about</a>
+                <a href="destination.html" class="links"><i class="fas fa-caret-right"></i>Destination</a>
+                <a href="service.html" class="links"><i class="fas fa-caret-right"></i>service</a>
+                <a href="#body" class="links"><i class="fas fa-caret-right"></i>news</a>
+            </div>
+            <div class="box contact">
+                <h3>contact us<div class="underline"></div></h3>
+                <p><i class="fas fa-phone"></i>+94-772561395</p>
+                <p class="email"><i class="fas fa-envelope"></i><a href="mailto:info@travelmania.com">info@travelmania.com</a></p>
+                <p><i class="fas fa-map-marker"></i>Colombo,Sri Lanka</p>
+            </div>
+        </div>
+        <hr>
+        <div class="created"><span>Group37</span> web project &copy; 2022 - All right reserved</div>
+    </footer>
+</body>
+</html>

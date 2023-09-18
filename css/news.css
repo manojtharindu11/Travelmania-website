@@ -1,0 +1,70 @@
+
+.main {
+    border: 1px solid white ;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 5px;
+    border: 2px solid white;
+    width: 100%;
+}
+table {
+    margin-top: 30px;
+    color: #29d9d5;
+    border-collapse: collapse;   
+    margin-left: auto;
+    margin-right: auto;      
+}
+.td1 {
+    border-collapse: collapse; 
+    border:1px solid black;
+    width: 33.33%;
+}
+.h3head {
+    font-size: 15px;
+    text-align: center;
+    text-transform: none;
+}
+.pic {
+    border: 1px solid rgb(18, 17, 17) ;
+    border-radius: 4px;
+    width:50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.h1head {
+    text-align: center;
+    color: #29d9d5;
+}
+.newstopic{
+    text-align:left;
+    color: rgb(3, 27, 49);
+    font-family:Leelawadee;
+    text-transform: none;
+}
+.image {
+    float: right;
+    width: 50%;
+    height:auto;
+    border:1px solid black;
+    border-radius: 9px;
+}
+.td2{
+    background-color: rgb(255, 225, 250);
+    border-collapse: collapse;
+    text-align: left;
+    padding: 20px;
+}
+.tr2 {
+    border:15px solid white;
+    border-collapse: collapse; 
+    background-color: rgb(255, 225, 250);
+    border-radius: 50px;
+} 
+.table2 {
+    margin-bottom: 30px;
+}     

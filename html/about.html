@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelmania - About Us</title>
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
+    <link rel="icon" type="image/x-icon" href="../images/home/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,600;0,700;1,500;1,800&family=Sedgwick+Ave+Display&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+        html { 
+            overflow-y: scroll; 
+            overflow-x:hidden; 
+        }
+        body { 
+            background-color: #eeeeee;
+        }
+        .navilist, .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            transition: 0.3s ease;
+            z-index: 999;
+            background-color:#0e1d2b7a ;
+            border-radius: 0;
+        }
+        .logo {
+            color:white;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 2.2em;
+        }
+        .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        .navbar-nav a {
+            color: white;
+            font-weight: 500;
+        }
+        .navbar-nav li:hover {
+            background-color: #29d9d5;
+        }
+        .navbar-nav a::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #29d9d5;
+            transition: 0.3s ease;
+        }
+        .navbar-nav a:hover::before {
+            width: 100%;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        footer {
+            position: relative;
+            bottom: 0;
+            background: linear-gradient(to right, #03040e, #0f0602);
+            width: 100%;
+            color: #fff;
+            padding: 100px 0 30px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .boxcontainer {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .box {
+            flex-basis: 25%;
+            padding: 10px;
+        }
+        .box:nth-child(2) {
+            flex-basis: 15%;
+        }
+        footer .logo {
+            color:white;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2em;
+        }
+        footer .logo i {
+            padding-right: 0.5rem;
+            color:#29d9d5;
+        }
+        footer p {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        footer h3 {
+            width: fit-content;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        .email {
+            width: fit-content;
+            border-bottom: 1px solid #ccc;
+        }
+        .box a {
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: white;
+        }
+        .quick .links {
+            display: block;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+        .quick .links:hover {
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        .quick i,.contact i {
+            padding-right: 0.5rem;
+        }
+        .social {
+            display: inline;
+        }
+        .social .fab {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .social .fab:hover {
+            background: #fff;
+        }
+        .social .fa-facebook-f:hover {
+            color: 	#4267B2;
+        }
+        .social .fa-youtube:hover {
+            color: #FF0000;
+        }
+        .social .fa-twitter:hover {
+            color: #00acee;
+        }
+        .social .fa-instagram:hover {
+            color: #8a3ab9;
+        }
+        .social .fa-linkedin:hover {
+            color: #0072b1;
+        }
+        .logo .fas:hover {
+            transform: scale(110%);
+        }
+        hr {
+            width: 90%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        .created {
+            text-align: center;
+        }
+        .created span {
+            color: #29d9d5;
+        }
+        .underline {
+            width: 100%;
+            height: 5px;
+            background: #767676;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            overflow: hidden;
+        }
+        @media screen and (max-width: 768px) {
+        .navbar {
+            position: inherit;
+            background-color:#0e1d2bee ;
+        }
+        .boxcontainer {
+            display: block;
+        }
+        .box {
+            align-items: center;
+        }
+        }
+        @media screen and (max-width: 854px) {
+            .boxcontainer {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 993px){
+        .about {
+            display: block;
+        }
+        }
+        @media screen and (max-width: 1135px) and (min-width: 768px) {
+        .box {
+            flex-basis:auto;
+        }
+        .underline {
+            position: relative;
+            top: 5px;
+        }
+        }
+    </style>
+</head>
+<body id="body">
+    <nav class="navilist navbar navbar-inverse" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand logo"><i class="fas fa-umbrella-beach"></i>Travelmania</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">home</a></li>
+                    <li class="active" style="background-color:#29d9d5;"><a href="#">about</a></li>
+                    <li><a href="destination.html">destination</a></li>
+                    <li><a href="service.html">service</a></li>
+                    <li><a href="news.html">news</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid main">
+        <h2>Who we are...?</h2>
+    </div>
+    <div class="container para">
+        <p><strong>W</strong>e, at Travelmaniya, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.</p>
+        <P>We have been moving excellent encounters for a considerable length of time through our cutting-edge planned occasion bundles and other fundamental travel administrations. We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters. Through our exceptionally curated occasion bundles, we need to take you on an adventure where you personally enjoy the stunning magnificence of America and far-off terrains. We need you to observe sensational scenes that are a long way past your creative ability.</P>
+    </div>
+    <div class="table-respostive">
+        <table class="table table1">
+            <thead>
+                <tr>
+                    <th>our mission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>Through travel, we connect people to positive experiences enabling them to see the world differently.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table2">
+            <thead>
+                <tr>
+                    <th>our vision</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>To create a world, where everyone is encouraged to travel.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2 style="text-align: center;">Save time, Save money!</h2>
+        <h5 style="text-align: center; text-transform:none;">sign up and we'll send the best deals for you</h5>
+        <form>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" onclick="checkemail()">
+            <p style="font-size: small; color:red; padding-left:10px;" id="pid"></p>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" onclick="checkemail()">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+          <button type="submit" class="button" onclick="return checkemail()">Submit</button>
+        </form>
+      </div>
+      <br><br>
+    <footer>
+        <div class="boxcontainer">
+            <div class="box">
+                <a href="#" class="logo"><i class='fas fa-umbrella-beach'></i>Travelmania</a>
+                <p>Travelmania is a place where you can find all info that you need to know before exploring Sri Lanka.</p>
+                <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box quick">
+                <h3>quick access<div class="underline"></div></h3>
+                <a href="../index.html" class="links"><i class="fas fa-caret-right"></i>home</a>
+                <a href="#body" class="links"><i class="fas fa-caret-right"></i>about</a>
+                <a href="destination.html" class="links"><i class="fas fa-caret-right"></i>Destination</a>
+                <a href="service.html" class="links"><i class="fas fa-caret-right"></i>service</a>
+                <a href="news.html" class="links"><i class="fas fa-caret-right"></i>news</a>
+            </div>
+            <div class="box contact">
+                <h3>contact us<div class="underline"></div></h3>
+                <p><i class="fas fa-phone"></i>+94-772561395</p>
+                <p class="email"><i class="fas fa-envelope"></i><a href="mailto:info@travelmania.com">info@travelmania.com</a></p>
+                <p><i class="fas fa-map-marker"></i>Colombo,Sri Lanka</p>
+            </div>
+        </div>
+        <hr>
+        <div class="created"><span>Group37</span> web project &copy; 2022 - All right reserved</div>
+    </footer>
+    <script>
+        function checkemail() {
+            const massage = document.getElementById("pid");
+            massage.innerHTML="";
+            let emailid = document.getElementById("email").value;
+            if (emailid == ""){
+                try {
+                    if (emailid == "") throw "This field is requird.";
+                }
+                catch(err) {
+                    massage.innerHTML = err;
+                    document.getElementById('email').style.border = "2px solid red";
+                }
+                finally {
+                    document.getElementById("email").value="";
+                }
+            }
+            else {
+                document.getElementById('email').style.border = "none";
+            }
+            
+        }
+      </script>
+</body>
+</html>
